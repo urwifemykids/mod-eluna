@@ -3423,7 +3423,30 @@ namespace LuaPlayer
 
         return 0;
     }
-
+    
+            /**
+            * Enable/disable Solo Dungeon Finder (LFG).
+            *
+            * @param bool enable : True/false to enable/disable.
+            */
+       int HandleSoloLFG(lua_State * L, Player * player)
+         {
+        bool enable = Eluna::CHECKVAL<bool>(L, 2);
+        player->HandleSoloLFG(enable);
+        
+            return 0;
+        }
+    
+           /**
+            * Returns `true` if the [Player] is 'Solo LFG' flagged, `false` otherwise.
+            *
+            * @return bool IsSoloLFG
+            */
+        int IsSoloLFG(lua_State * L, Player * player)
+         {
+        Eluna::Push(L, player->IsSoloLFG());
+        return 1;
+        }
     /**
     * Adds a glyph specified by `glyphId` to the [Player]'s current talent specialization into the slot with the index `slotIndex`
     *

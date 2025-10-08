@@ -829,6 +829,8 @@ ElunaRegister<Player> PlayerMethods[] =
     { "SetViewpoint", &LuaPlayer::SetViewpoint },
     { "ToggleInstantFlight", &LuaPlayer::ToggleInstantFlight },
     { "SetCreationTime", &LuaPlayer::SetCreationTime },
+    { "IsSoloLFG", & LuaPlayer::IsSoloLFG },
+    { "HandleSoloLFG", & LuaPlayer::HandleSoloLFG },
 
     { NULL, NULL }
 };
