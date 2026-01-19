@@ -3431,7 +3431,7 @@ namespace LuaPlayer
             */
        int HandleSoloLFG(lua_State * L, Player * player)
          {
-        bool enable = Eluna::CHECKVAL<bool>(L, 2);
+        bool enable = ALE::CHECKVAL<bool>(L, 2);
         player->HandleSoloLFG(enable);
         
             return 0;
@@ -3444,7 +3444,7 @@ namespace LuaPlayer
             */
         int IsSoloLFG(lua_State * L, Player * player)
          {
-        Eluna::Push(L, player->IsSoloLFG());
+            ALE::Push(L, player->IsSoloLFG());
         return 1;
         }
     /**
